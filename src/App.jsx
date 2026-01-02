@@ -16,7 +16,7 @@ function App() {
             <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Hammad.dev
             </div>
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex space-x-8  text-white">
               <NavLink to="/" className="hover:text-blue-600 transition-colors">Home</NavLink>
               <NavLink to="/about" className="hover:text-blue-600 transition-colors">About</NavLink>
               <NavLink to="/projects" className="hover:text-blue-600 transition-colors">Projects</NavLink>         
