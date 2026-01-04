@@ -87,15 +87,15 @@ const About = () => {
   ];
 
   const stats = [
-    { number: "50+", label: "Projects Completed", icon: <FaRocket /> },
+    { number: "30+", label: "Projects Completed", icon: <FaRocket /> },
     { number: "30+", label: "Happy Clients", icon: <FaHeart /> },
-    { number: "5+", label: "Years Experience", icon: <FaBriefcase /> },
+    { number: "Fresher", label: "Years Experience", icon: <FaBriefcase /> },
     { number: "100k+", label: "Lines of Code", icon: <FaCode /> }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-gray-200 transition-colors duration-300">
-      {/* Hero Section */}
+
       <section className="container mx-auto px-6 py-20 md:py-32">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 mb-12 md:mb-0">
@@ -138,7 +138,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
+
       <section className="container mx-auto px-6 py-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
           {stats.map((stat, index) => (
@@ -159,16 +159,16 @@ const About = () => {
         </div>
       </section>
 
-      {/* Timeline & Skills Section */}
+ 
       <section className="bg-white dark:bg-gray-900 py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
-            {/* Timeline */}
+        
             <div>
               <h2 className="text-3xl font-bold mb-8">My Journey</h2>
               <div className="relative">
-                {/* Vertical line */}
+          
                 <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-500"></div>
                 
                 {timeline.map((item, index) => (
@@ -217,7 +217,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values Section */}
+
       <section className="py-20">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-4">My Values</h2>
@@ -239,12 +239,12 @@ const About = () => {
         </div>
       </section>
 
-      {/* Personal Section */}
+ 
       <section className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
-            {/* Hobbies & Interests */}
+    
             <div>
               <h2 className="text-3xl font-bold mb-8">Beyond Coding</h2>
               <p className="text-gray-600 dark:text-gray-400 mb-8">
@@ -264,7 +264,7 @@ const About = () => {
               </div>
             </div>
 
-            {/* Personal Philosophy */}
+         
             <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg">
               <div className="flex items-center gap-3 mb-6">
                 <FaGlobeAmericas className="text-blue-500 text-2xl" />
@@ -300,7 +300,7 @@ const About = () => {
                 </div>
               </div>
 
-              {/* Fun Fact */}
+     
               <div className="mt-8 p-4 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 rounded-xl">
                 <h4 className="font-bold mb-2">Fun Fact</h4>
                 <p className="text-gray-600 dark:text-gray-400">
@@ -313,7 +313,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">Let's Build Something Amazing Together</h2>
@@ -332,7 +331,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Footer */}
+   
       <footer className="bg-gray-900 text-gray-400 py-8">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
