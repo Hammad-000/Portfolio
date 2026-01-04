@@ -1,27 +1,28 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaPhone, FaMapMarkerAlt, FaCalendarAlt, FaPaperPlane, FaClock } from 'react-icons/fa';
+import { BsTwitterX } from "react-icons/bs";
 
 const Contact = () => {
   const contactInfo = [
     {
       icon: <FaEnvelope className="text-blue-500" />,
       title: "Email Address",
-      details: "hammad@example.com",
-      link: "mailto:hammad@example.com",
+      details: "syedhammad283@gmail.com",
+      link: "mailto:syedhammad283@gmail.com",
       description: "For project inquiries and collaborations"
     },
     {
       icon: <FaPhone className="text-green-500" />,
       title: "Phone Number",
-      details: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      details: "+923110250787",
+      link: "tel:+923110250787",
       description: "Available Mon-Fri, 9AM-6PM EST"
     },
     {
       icon: <FaMapMarkerAlt className="text-red-500" />,
       title: "Location",
-      details: "San Francisco, CA",
-      link: "#",
+      details: "Karachi, Pakistan",
+      link: "https://maps.app.goo.gl/u52mro6TxcvmUmhT6",
       description: "Open to remote positions worldwide"
     },
     {
@@ -29,25 +30,25 @@ const Contact = () => {
       title: "Schedule Meeting",
       details: "Book a call",
       link: "#",
-      description: "30-min consultation slot"
+      description: "10-min consultation slot"
     }
   ];
 
   const socialLinks = [
-    { platform: "GitHub", icon: <FaGithub />, username: "@hammaddev", link: "#", color: "hover:text-gray-800 dark:hover:text-white" },
-    { platform: "LinkedIn", icon: <FaLinkedin />, username: "/in/hammad", link: "#", color: "hover:text-blue-700 dark:hover:text-blue-400" },
-    { platform: "Twitter", icon: <FaTwitter />, username: "@hammad_tweets", link: "#", color: "hover:text-blue-400 dark:hover:text-blue-300" }
+    { platform: "GitHub", icon: <FaGithub />, username: "@Hammad-000", link: "https://github.com/Hammad-000", color: "hover:text-gray-800 dark:hover:text-white" },
+    { platform: "LinkedIn", icon: <FaLinkedin />, username: "Syed Hammad Ahmed", link: "https://www.linkedin.com/in/syed-hammad-ahmed-412834287/", color: "hover:text-blue-700 dark:hover:text-blue-400" },
+    { platform: "Twitter", icon: <BsTwitterX />, username: "@Syed__Hammad", link: "https://x.com/Syed__Hammad", color: "hover:text-blue-400 dark:hover:text-blue-300" }
   ];
 
   const workingHours = [
-    { day: "Monday - Friday", time: "9:00 AM - 6:00 PM", status: "Available" },
-    { day: "Saturday", time: "10:00 AM - 2:00 PM", status: "Limited" },
+    { day: "Monday - Friday", time: "11:00 AM - 8:00 PM", status: "Available" },
+    { day: "Saturday", time: "11:00 AM - 2:00 PM", status: "Limited" },
     { day: "Sunday", time: "Day Off", status: "Unavailable" }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-gray-200 transition-colors duration-300">
-      {/* Hero Section */}
+      
       <section className="container mx-auto px-6 py-20 md:py-32">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 mb-12 md:mb-0">
@@ -92,7 +93,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Information Grid */}
       <section className="container mx-auto px-6 py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {contactInfo.map((info, index) => (
@@ -122,7 +122,7 @@ const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
+
           <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg">
             <h2 className="text-3xl font-bold mb-8">Send me a message</h2>
             <form className="space-y-6">
@@ -190,9 +190,9 @@ const Contact = () => {
             </form>
           </div>
 
-          {/* Availability & Social Details */}
+
           <div>
-            {/* Working Hours */}
+    
             <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg mb-8">
               <div className="flex items-center gap-3 mb-6">
                 <FaClock className="text-blue-500 text-xl" />
@@ -218,7 +218,7 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Social Profiles */}
+
             <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold mb-6">Connect on Social Media</h3>
               
@@ -255,7 +255,6 @@ const Contact = () => {
                 ))}
               </div>
 
-              {/* Newsletter Subscription */}
               <div className="mt-8 p-4 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl">
                 <h4 className="font-bold mb-2">Join My Newsletter</h4>
                 <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
@@ -276,7 +275,7 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Map/Address Section */}
+
         <div className="mt-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
@@ -306,7 +305,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Footer */}
+
       <footer className="bg-gray-900 text-gray-400 py-8 mt-20">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center">

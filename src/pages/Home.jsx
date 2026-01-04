@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaCode, FaPalette, FaMobile, FaServer, FaArrowRight, FaDownload, FaBolt, FaDatabase, FaNetworkWired } from 'react-icons/fa';
 import { SiHtml5, SiCss3, SiJavascript, SiReact, SiGit, SiTailwindcss, SiSupabase, SiFramer, SiAxios, SiReactquery } from 'react-icons/si';
 import { motion, useAnimation, useInView, useScroll, useTransform } from 'framer-motion';
+import { IoLogoGithub } from "react-icons/io5";
 import { useRef } from 'react';
 
 const Home = () => {
@@ -75,7 +76,7 @@ const Home = () => {
     { icon: <SiTailwindcss />, color: "text-cyan-300", delay: 0.5 },
     { icon: <SiJavascript />, color: "text-yellow-500", delay: 1 },
     { icon: <FaCode />, color: "text-blue-400", delay: 1.5 },
-    { icon: <FaPalette />, color: "text-purple-400", delay: 2 },
+    { icon: <IoLogoGithub />, color: "text-blue-400", delay: 2 },
 
   ];
 
@@ -179,7 +180,7 @@ const Home = () => {
           animate="animate"
           className={`absolute ${icon.color} text-4xl `}
           style={{
-            left: `${23 + index * 4}%`,
+            left: `${23 + index * 3}%`,
             top: `${27 + index * 1}%`
           }}
         >
@@ -254,7 +255,7 @@ const Home = () => {
               variants={containerVariants}
               className="flex space-x-6"
             >
-              {[FaGithub, FaLinkedin, FaTwitter, FaEnvelope].map((Icon, index) => (
+              {[FaGithub, FaLinkedin, FaTwitter,  ].map((Icon, index) => (
                 <motion.a
                   key={index}
                   variants={itemVariants}
@@ -295,7 +296,7 @@ const Home = () => {
                   initial={{ scale: 1.2 }}
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.8 }}
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+                  src="./public/photo/dp.jpg" 
                   alt="Hammad - Developer" 
                   className="w-full h-full object-cover"
                 />
@@ -308,18 +309,18 @@ const Home = () => {
                 transition={{ delay: 0.5, duration: 0.6 }}
                 className="absolute -bottom-6 -left-6 bg-gradient-to-r from-green-500 to-emerald-600 text-white p-4 rounded-2xl shadow-xl"
               >
-                <div className="text-xl font-bold">3+ Years</div>
-                <div className="text-sm">Experience</div>
+                <div className="text-l p-1 font-bold">Fresher</div>
+          
               </motion.div>
               
               <motion.div 
                 initial={{ scale: 0, rotate: 180 }}
                 animate={{ scale: 1, rotate: 0 }}
                 transition={{ delay: 0.7, duration: 0.6 }}
-                className="absolute -top-6 -right-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white p-4 rounded-2xl shadow-xl"
+                className="absolute -top-6 -right-6 flex items-center bg-gradient-to-r from-purple-500 to-pink-600 text-white p-4 rounded-2xl shadow-xl"
               >
-                <div className="text-xl font-bold">50+</div>
-                <div className="text-sm">Projects</div>
+                <div className="text-l font-bold">10+</div>
+                <div className="text-l">Projects</div>
               </motion.div>
             </div>
           </motion.div>

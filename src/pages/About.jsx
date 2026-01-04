@@ -124,14 +124,14 @@ const About = () => {
             <div className="relative">
               <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-white dark:border-gray-800 shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  src="./public/photo/dp.jpg" 
                   alt="Hammad working" 
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 rounded-2xl shadow-xl">
-                <div className="text-3xl font-bold">5+</div>
-                <div className="text-sm">Years Experience</div>
+              <div className="flex absolute -bottom-9 -right-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 rounded-2xl shadow-xl">
+                <div className="text-xl font-bold">Frontend Developer</div>
+             
               </div>
             </div>
           </div>
