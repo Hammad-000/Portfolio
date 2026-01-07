@@ -110,7 +110,7 @@ const About = () => {
               About <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Me</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl">
-              Passionate developer with over 5 years of experience creating beautiful, 
+              Passionate developer  creating beautiful, 
               functional web applications. I combine technical expertise with creative 
               design thinking.
             </p>
@@ -169,27 +169,34 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
         
-            <div>
-              <h2 className="text-3xl font-bold mb-8">My Journey</h2>
-              <div className="relative">
           
-                <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-500"></div>
-                
-                {timeline.map((item, index) => (
-                  <div key={index} className="relative pl-16 pb-10 last:pb-0">
-                    <div className="absolute left-4 flex items-center justify-center w-10 h-10 bg-white dark:bg-gray-800 rounded-full border-4 border-white dark:border-gray-900 z-10">
-                      {item.icon}
+            
+            <div>
+              <h2 className="text-3xl font-bold mb-8">Hobbies</h2>
+           
+              
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {hobbies.map((hobby, index) => (
+                  <div key={index} className="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-50 dark:bg-gray-800 hover:shadow-lg transition-shadow">
+                    <div className={`p-3 rounded-full ${hobby.color} mb-3`}>
+                      <span className="text-xl">{hobby.icon}</span>
                     </div>
-                    <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 hover:shadow-lg transition-shadow">
-                      <div className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-2">{item.year}</div>
-                      <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                      <div className="text-gray-600 dark:text-gray-400 mb-2">{item.company}</div>
-                      <p className="text-gray-500 dark:text-gray-400">{item.description}</p>
-                    </div>
+                    <span className="font-medium">{hobby.name}</span>
                   </div>
                 ))}
+                
               </div>
+                 <p className="text-gray-600 dark:text-gray-400 mb-8 pt-2">
+            When I’m not coding, you’ll likely find me exploring new hobbies or diving deeper into my current passions. 
+            Whether it’s experimenting with different coffee brewing methods to perfect my morning ritual,
+             hitting the trails for a scenic bike ride, capturing stunning landscapes with my camera, or getting lost in a good book,
+              I’m always looking for ways to expand my horizons. I’m also a huge fan of music, gaming, 
+              and staying fit with regular gym sessions. No matter the activity, I believe in living life to the fullest,
+             always striving to try something new and enjoy the simple pleasures that each day brings.
+              </p>
             </div>
+
+            
 
             {/* Skills */}
             <div>
@@ -244,79 +251,7 @@ const About = () => {
       </section>
 
  
-      <section className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 py-20">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            
-    
-            <div>
-              <h2 className="text-3xl font-bold mb-8">Hobbies</h2>
-              <p className="text-gray-600 dark:text-gray-400 mb-8">
-            When I’m not coding, you’ll find me outdoors, capturing moments through my lens or trying new coffee brewing methods.
-             I love bike riding, listening to music, gaming, and staying active at the gym.
-             Exploring new hobbies and finding joy in the little things is what keeps me balanced.
-              </p>
-              
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {hobbies.map((hobby, index) => (
-                  <div key={index} className="flex flex-col items-center justify-center p-4 rounded-xl bg-white dark:bg-gray-900 hover:shadow-lg transition-shadow">
-                    <div className={`p-3 rounded-full ${hobby.color} mb-3`}>
-                      <span className="text-xl">{hobby.icon}</span>
-                    </div>
-                    <span className="font-medium">{hobby.name}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-         
-            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg">
-              <div className="flex items-center gap-3 mb-6">
-                <FaGlobeAmericas className="text-blue-500 text-2xl" />
-                <h3 className="text-2xl font-bold">My Philosophy</h3>
-              </div>
-              
-              <div className="space-y-6">
-                <div>
-                  <h4 className="font-bold text-lg mb-2">Continuous Learning</h4>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Technology evolves rapidly. I dedicate time each week to learn 
-                    new tools, frameworks, and best practices to stay at the forefront 
-                    of web development.
-                  </p>
-                </div>
-                
-                <div>
-                  <h4 className="font-bold text-lg mb-2">Problem-Solving Approach</h4>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    I believe in understanding the problem deeply before jumping to 
-                    solutions. This approach helps create more effective and 
-                    user-friendly applications.
-                  </p>
-                </div>
-                
-                <div>
-                  <h4 className="font-bold text-lg mb-2">Work-Life Balance</h4>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Maintaining a healthy balance between work and personal life 
-                    fuels creativity and prevents burnout. This balance makes me 
-                    more productive and innovative.
-                  </p>
-                </div>
-              </div>
-
      
-              <div className="mt-8 p-4 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 rounded-xl">
-                <h4 className="font-bold mb-2">Fun Fact</h4>
-                <p className="text-gray-600 dark:text-gray-400">
-                  I've visited 15 countries and love incorporating design 
-                  inspirations from different cultures into my work.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
