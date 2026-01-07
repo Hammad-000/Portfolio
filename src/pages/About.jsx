@@ -1,5 +1,9 @@
 import React from 'react';
-import { FaGraduationCap, FaBriefcase, FaAward, FaHeart, FaCode, FaPalette, FaRocket, FaUsers, FaLightbulb, FaChartLine, FaGlobeAmericas, FaTools, FaBookOpen, FaGamepad, FaMusic, FaCamera, FaHiking, FaCoffee } from 'react-icons/fa';
+import { FaGraduationCap, FaBriefcase, FaAward, FaHeart, FaCode, FaPalette, FaRocket, FaUsers, FaLightbulb, FaChartLine, FaGlobeAmericas, FaTools, FaBookOpen, FaGamepad, FaMusic, FaCamera,  FaCoffee } from 'react-icons/fa';
+import { RiMotorbikeFill } from "react-icons/ri";
+import { LiaDumbbellSolid } from "react-icons/lia";
+
+
 
 const About = () => {
   const timeline = [
@@ -79,15 +83,15 @@ const About = () => {
 
   const hobbies = [
     { name: "Photography", icon: <FaCamera />, color: "bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400" },
-    { name: "Hiking", icon: <FaHiking />, color: "bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400" },
+    { name: "Bike Riding", icon: <RiMotorbikeFill />, color: "bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400" },
     { name: "Music", icon: <FaMusic />, color: "bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-400" },
     { name: "Gaming", icon: <FaGamepad />, color: "bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400" },
     { name: "Reading", icon: <FaBookOpen />, color: "bg-yellow-100 text-yellow-600 dark:bg-yellow-900/30 dark:text-yellow-400" },
-    { name: "Coffee Brewing", icon: <FaCoffee />, color: "bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400" }
+    { name: "Gym", icon: <LiaDumbbellSolid  />, color: "bg-orange-700 text-orange-500 dark:bg-orange-800 dark:text-orange-400" }
   ];
 
   const stats = [
-    { number: "30+", label: "Projects Completed", icon: <FaRocket /> },
+    { number: "20+", label: "Projects Completed", icon: <FaRocket /> },
     { number: "30+", label: "Happy Clients", icon: <FaHeart /> },
     { number: "Fresher", label: "Years Experience", icon: <FaBriefcase /> },
     { number: "100k+", label: "Lines of Code", icon: <FaCode /> }
@@ -124,7 +128,7 @@ const About = () => {
             <div className="relative">
               <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-white dark:border-gray-800 shadow-2xl">
                 <img 
-                  src="./public/photo/dp.jpg" 
+                  src="/photo/dp.jpg" 
                   alt="Hammad working" 
                   className="w-full h-full object-cover"
                 />
@@ -246,10 +250,11 @@ const About = () => {
             
     
             <div>
-              <h2 className="text-3xl font-bold mb-8">Beyond Coding</h2>
+              <h2 className="text-3xl font-bold mb-8">Hobbies</h2>
               <p className="text-gray-600 dark:text-gray-400 mb-8">
-                When I'm not writing code, you can find me exploring the outdoors, 
-                capturing moments with my camera, or experimenting with new coffee brewing methods.
+            When I’m not coding, you’ll find me outdoors, capturing moments through my lens or trying new coffee brewing methods.
+             I love bike riding, listening to music, gaming, and staying active at the gym.
+             Exploring new hobbies and finding joy in the little things is what keeps me balanced.
               </p>
               
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">

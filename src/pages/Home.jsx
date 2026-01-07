@@ -296,7 +296,7 @@ const Home = () => {
                   initial={{ scale: 1.2 }}
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.8 }}
-                  src="./public/photo/dp.jpg" 
+                  src="/photo/dp.jpg" 
                   alt="Hammad - Developer" 
                   className="w-full h-full object-cover"
                 />
