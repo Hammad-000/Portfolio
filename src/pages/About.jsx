@@ -40,19 +40,19 @@ const About = () => {
   const skills = [
     {
       category: "Frontend",
-      items: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Redux", "Framer Motion"],
+      items: ["React.js", "JavaScript", "TypeScript", "Html" ],
       icon: <FaCode className="text-blue-500" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
       category: "Design",
-      items: ["UI/UX Design", "Figma", "Adobe XD", "Prototyping", "Wireframing", "Design Systems"],
+      items: ["UI/UX Design", "Figma", "Tailwind CSS", "Motion", "Magic Ui"],
       icon: <FaPalette className="text-pink-500" />,
       color: "from-pink-500 to-rose-500"
     },
     {
       category: "Tools",
-      items: ["Git/GitHub", "VS Code", "Webpack", "Jest", "Cypress", "Docker"],
+      items: ["Git", "VS Code", "Npm", "Pmpn", "Githurb", "Supabase"],
       icon: <FaTools className="text-green-500" />,
       color: "from-green-500 to-emerald-500"
     }
