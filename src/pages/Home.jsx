@@ -5,6 +5,8 @@ import { motion, useAnimation, useInView, useScroll, useTransform } from 'framer
 import { IoLogoGithub } from "react-icons/io5";
 import { useRef } from 'react';
 
+
+
 const Home = () => {
   const controls = useAnimation();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -612,44 +614,7 @@ const Home = () => {
       </motion.section>
 
       {/* Footer */}
-      <motion.footer 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5 }}
-        className="bg-gray-900 text-gray-400 py-8"
-      >
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <motion.div 
-              whileHover={{ scale: 1.05 }}
-              className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4 md:mb-0"
-            >
-              Hammad.dev
-            </motion.div>
-            <div className="flex space-x-6 mb-4 md:mb-0">
-              {[FaGithub, FaLinkedin, FaTwitter, FaEnvelope].map((Icon, index) => (
-                <motion.a
-                  key={index}
-                  href="#"
-                  whileHover={{ scale: 1.2, y: -3 }}
-                  whileTap={{ scale: 0.9 }}
-                  className="hover:text-white transition-colors"
-                >
-                  <Icon />
-                </motion.a>
-              ))}
-            </div>
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1 }}
-              className="text-sm"
-            >
-              © {new Date().getFullYear()} Hammad. All rights reserved.
-            </motion.div>
-          </div>
-        </div>
-      </motion.footer>
+   
     </motion.div>
   );
 };

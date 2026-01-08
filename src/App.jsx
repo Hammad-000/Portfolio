@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Works from './pages/Works';
 import Contact from './pages/Contact';
+import Footer from './components/Footer';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,6 +17,7 @@ function App() {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+  
 
   return (
     <Router>
@@ -202,6 +204,7 @@ function App() {
           </Routes>
         </div>
       </div>
+      <Footer/>
     </Router>
   );
 }
