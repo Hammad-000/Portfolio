@@ -71,11 +71,6 @@ function Footer() {
             {/* Social Links - Horizontal Row Design */}
             <div>
               <h3 className="text-lg font-semibold text-white mb-4">Connect with me</h3>
-              
-              {/* Option 1: Simple Icon Links in Row */}
-             
-
-              {/* Option 2: Compact Cards in Row */}
               <div className="grid grid-cols-3 gap-3">
                 {socialLinks.map((social, index) => (
                   <a
