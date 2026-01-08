@@ -40,12 +40,7 @@ const Contact = () => {
     { platform: "Twitter", icon: <BsTwitterX />, username: "@Syed__Hammad", link: "https://x.com/Syed__Hammad", color: "hover:text-blue-400 dark:hover:text-blue-300" }
   ];
 
-  const workingHours = [
-    { day: "Monday - Friday", time: "11:00 AM - 8:00 PM", status: "Available" },
-    { day: "Saturday", time: "11:00 AM - 2:00 PM", status: "Limited" },
-    { day: "Sunday", time: "Day Off", status: "Unavailable" }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-gray-200 transition-colors duration-300">
       
@@ -193,30 +188,7 @@ const Contact = () => {
 
           <div>
     
-            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg mb-8">
-              <div className="flex items-center gap-3 mb-6">
-                <FaClock className="text-blue-500 text-xl" />
-                <h3 className="text-2xl font-bold">Working Hours</h3>
-              </div>
-              
-              <div className="space-y-4">
-                {workingHours.map((hour, index) => (
-                  <div key={index} className="flex items-center justify-between py-3 border-b border-gray-100 dark:border-gray-800 last:border-0">
-                    <div>
-                      <p className="font-semibold">{hour.day}</p>
-                      <p className="text-gray-500 dark:text-gray-400 text-sm">{hour.time}</p>
-                    </div>
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                      hour.status === 'Available' ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400' :
-                      hour.status === 'Limited' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400' :
-                      'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400'
-                    }`}>
-                      {hour.status}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
+        
 
 
             <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg">
