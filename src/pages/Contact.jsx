@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaPhone, FaMapMarkerAlt, FaCalendarAlt, FaPaperPlane, FaClock } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt, FaCalendarAlt, FaPaperPlane, FaClock } from 'react-icons/fa';
 import { BsTwitterX } from "react-icons/bs";
 
 const Contact = () => {
