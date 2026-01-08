@@ -306,32 +306,7 @@ const Contact = () => {
       </section>
 
 
-      <footer className="bg-gray-900 text-gray-400 py-8 mt-20">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4 md:mb-0">
-              Hammad.dev
-            </div>
-            <div className="flex space-x-6 mb-4 md:mb-0">
-              <a href="#" className="hover:text-white transition-colors">
-                <FaGithub />
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                <FaLinkedin />
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                <FaTwitter />
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                <FaEnvelope />
-              </a>
-            </div>
-            <div className="text-sm">
-              © {new Date().getFullYear()} Hammad. All rights reserved.
-            </div>
-          </div>
-        </div>
-      </footer>
+
     </div>
   );
 };
