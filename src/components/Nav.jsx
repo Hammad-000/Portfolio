@@ -73,13 +73,7 @@ const Nav = ({ toggleMenu, isMenuOpen, closeMenu }) => {
                 <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent bg-300% animate-gradient">
                   Hammad Ahmed
                 </span>
-<<<<<<< HEAD
               
-=======
-                <span className="text-xs text-gray-500 dark:text-gray-400 font-medium tracking-wider">
-                  Full Stack Developer
-                </span>
->>>>>>> 01512c90a872594a082a1360fb201cdb29d61ccd
               </div>
             </NavLink>
 
