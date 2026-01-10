@@ -69,22 +69,7 @@ const Contact = () => {
               ))}
             </div>
           </div>
-          
-          <div className="md:w-1/2 flex justify-center">
-            <div className="relative">
-              <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-white dark:border-gray-800 shadow-2xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="Contact Hammad" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-6 -left-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 rounded-2xl shadow-xl">
-                <div className="text-3xl font-bold">24h</div>
-                <div className="text-sm">Response Time</div>
-              </div>
-            </div>
-          </div>
+  
         </div>
       </section>
 

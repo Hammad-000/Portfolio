@@ -304,26 +304,8 @@ const Home = () => {
                 />
               </motion.div>
 
-              {/* Animated badges */}
-              <motion.div 
-                initial={{ scale: 0, rotate: -180 }}
-                animate={{ scale: 1, rotate: 0 }}
-                transition={{ delay: 0.5, duration: 0.6 }}
-                className="absolute -bottom-6 -left-6 bg-gradient-to-r from-green-500 to-emerald-600 text-white p-4 rounded-2xl shadow-xl"
-              >
-                <div className="text-l p-1 font-bold">Fresher</div>
           
-              </motion.div>
-              
-              <motion.div 
-                initial={{ scale: 0, rotate: 180 }}
-                animate={{ scale: 1, rotate: 0 }}
-                transition={{ delay: 0.7, duration: 0.6 }}
-                className="absolute -top-6 -right-6 flex items-center bg-gradient-to-r from-purple-500 to-pink-600 text-white p-4 rounded-2xl shadow-xl"
-              >
-                <div className="text-l font-bold">10+</div>
-                <div className="text-l">Projects</div>
-              </motion.div>
+            
             </div>
           </motion.div>
         </div>
@@ -613,7 +595,7 @@ const Home = () => {
         </motion.div>
       </motion.section>
 
-      {/* Footer */}
+  
    
     </motion.div>
   );
