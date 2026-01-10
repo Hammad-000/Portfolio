@@ -168,8 +168,7 @@ const About = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
-        
-          
+      
             
             <div>
               <h2 className="text-3xl font-bold mb-8">Hobbies</h2>
