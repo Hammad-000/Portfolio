@@ -1,6 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { FaBars, FaTimes, FaSun, FaMoon, FaArrowRight } from 'react-icons/fa';
+import { 
+  FaBars, 
+  FaTimes, 
+  FaSun, 
+  FaMoon, 
+  FaArrowRight,
+  FaUser,
+  FaProjectDiagram,
+  FaEnvelope,
+  FaCode,
+  FaBriefcase,
+  FaPaperPlane
+} from 'react-icons/fa';
+import { IoHome } from "react-icons/io5";
+import { MdOutlineWork } from "react-icons/md";
+import { HiOutlineDocumentText } from "react-icons/hi";
 
 const Nav = ({ toggleMenu, isMenuOpen, closeMenu }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -37,11 +52,31 @@ const Nav = ({ toggleMenu, isMenuOpen, closeMenu }) => {
   };
 
   const navItems = [
-    { path: '/', label: 'Home' },
-    { path: '/about', label: 'About' },
-    { path: '/projects', label: 'Projects' },
-    { path: '/blog', label: 'Blog' },
-    { path: '/contact', label: 'Contact' },
+    { 
+      path: '/', 
+      icon: <IoHome className="w-4 h-4" />, 
+      label: 'Home',
+      mobileIcon: <IoHome className="w-5 h-5" />
+    },
+    { 
+      path: '/about', 
+      icon: <FaUser className="w-4 h-4" />, 
+      label: 'About',
+      mobileIcon: <FaUser className="w-5 h-5" />
+    },
+    { 
+      path: '/projects', 
+      icon: <FaCode className="w-4 h-4" />, 
+      label: 'Projects',
+      mobileIcon: <FaCode className="w-5 h-5" />
+    },
+    { 
+      path: '/contact', 
+      icon: <FaPaperPlane className="w-4 h-4" />, 
+      label: 'Contact',
+      mobileIcon: <FaPaperPlane className="w-5 h-5" />
+    },
+ 
   ];
 
   return (
@@ -73,7 +108,6 @@ const Nav = ({ toggleMenu, isMenuOpen, closeMenu }) => {
                 <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent bg-300% animate-gradient">
                   Hammad Ahmed
                 </span>
-              
               </div>
             </NavLink>
 
@@ -82,29 +116,44 @@ const Nav = ({ toggleMenu, isMenuOpen, closeMenu }) => {
               {navItems.map((item) => (
                 <NavLink 
                   key={item.path}
-                  to={item.path} 
+                  to={item.path}
                   end={item.path === '/'}
-                  className="relative px-1"
+                  className="relative px-1 flex items-center group/nav-item"
                 >
                   {({ isActive }) => (
                     <>
-                      <span className={`px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
-                        isActive 
-                          ? 'text-white' 
-                          : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
-                      }`}>
-                        {item.label}
-                      </span>
+                      <div className="flex items-center px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 group-hover/nav-item:gap-3 gap-2">
+                        <span className={`transition-all duration-300 ${
+                          isActive 
+                            ? 'text-blue-600 dark:text-blue-400 scale-110' 
+                            : 'text-gray-600 dark:text-gray-400 group-hover/nav-item:text-blue-600 dark:group-hover/nav-item:text-blue-400 group-hover/nav-item:scale-110'
+                        }`}>
+                          {item.icon}
+                        </span>
+                        <span className={`transition-all duration-300 ${
+                          isActive 
+                            ? 'text-gray-900 dark:text-white font-semibold' 
+                            : 'text-gray-700 dark:text-gray-300 group-hover/nav-item:text-gray-900 dark:group-hover/nav-item:text-white'
+                        }`}>
+                          {item.label}
+                        </span>
+                      </div>
+                      
                       {/* Active indicator */}
                       {isActive && (
                         <>
-                          <div className="absolute inset-0  rounded-xl shadow shadow-blue-500 p-5  "></div>
+                          <div className="absolute inset-0 bg-gradient-to-r from-blue-100/50 to-purple-100/50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl border border-blue-200/50 dark:border-blue-700/30 shadow-inner shadow-blue-500/10" />
                           <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1/3 h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>
+                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-xl animate-pulse"></div>
                         </>
                       )}
-                      {/* Hover effect */}
+                      
+                      {/* Hover effect for inactive items */}
                       {!isActive && (
-                        <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800 rounded-xl opacity-0 hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+                        <>
+                          <div className="absolute inset-0 bg-gray-100/50 dark:bg-gray-800/50 rounded-xl opacity-0 group-hover/nav-item:opacity-100 transition-opacity duration-300 -z-10" />
+                          <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full group-hover/nav-item:w-1/3 transition-all duration-500"></div>
+                        </>
                       )}
                     </>
                   )}
@@ -114,10 +163,14 @@ const Nav = ({ toggleMenu, isMenuOpen, closeMenu }) => {
               {/* Theme Toggle */}
               <button
                 onClick={toggleDarkMode}
-                className="ml-4 p-2.5 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 hover:rotate-12"
+                className="ml-4 p-2.5 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 hover:rotate-12 group/theme"
                 aria-label="Toggle theme"
               >
-                {darkMode ? <FaSun className="w-5 h-5" /> : <FaMoon className="w-5 h-5" />}
+                {darkMode ? (
+                  <FaSun className="w-5 h-5 group-hover/theme:text-yellow-500 transition-colors duration-300" />
+                ) : (
+                  <FaMoon className="w-5 h-5 group-hover/theme:text-blue-500 transition-colors duration-300" />
+                )}
               </button>
               
               {/* CTA Button */}
@@ -130,6 +183,7 @@ const Nav = ({ toggleMenu, isMenuOpen, closeMenu }) => {
                   <FaArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-700 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
             </div>
 
@@ -205,16 +259,27 @@ const Nav = ({ toggleMenu, isMenuOpen, closeMenu }) => {
                   to={item.path}
                   onClick={closeMenu}
                   className={({ isActive }) => `
-                    flex items-center justify-between px-4    py-3.5 rounded-xl transition-all duration-300 transform hover:scale-[1.02]
+                    flex items-center px-4 py-3.5 rounded-xl transition-all duration-300 transform hover:scale-[1.02]
                     ${isActive 
-                      ? 'bg-gradient-to-r from-blue-500/10  to-purple-500/10  text-blue-600 dark:text-blue-400 border-l-4 border-blue-500' 
+                      ? 'bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-600 dark:text-blue-400 border-l-4 border-blue-500' 
                       : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                     }
                   `}
                 >
-                  <span className="font-medium">{item.label}</span>
-                  {location.pathname === item.path && (
-                    <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
+                  {({ isActive }) => (
+                    <>
+                      <div className="flex items-center w-full">
+                        <span className={`mr-3 transition-transform duration-300 ${
+                          isActive ? 'scale-110' : ''
+                        }`}>
+                          {item.mobileIcon}
+                        </span>
+                        <span className="font-medium flex-1">{item.label}</span>
+                        {location.pathname === item.path && (
+                          <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
+                        )}
+                      </div>
+                    </>
                   )}
                 </NavLink>
               ))}
@@ -238,9 +303,10 @@ const Nav = ({ toggleMenu, isMenuOpen, closeMenu }) => {
               <div className="mt-6 space-y-3 text-sm">
                 <p className="text-gray-600 dark:text-gray-400">Ready to bring your ideas to life?</p>
                 <a 
-                  href="mailto:hello@example.com" 
-                  className="block text-blue-600 dark:text-blue-400 hover:underline"
+                  href="mailto:hello@hammad.dev" 
+                  className="flex items-center text-blue-600 dark:text-blue-400 hover:underline"
                 >
+                  <FaEnvelope className="mr-2 w-4 h-4" />
                   hello@hammad.dev
                 </a>
               </div>

@@ -185,7 +185,8 @@ const About = () => {
                 ))}
                 
               </div>
-                 <p className="text-gray-600 dark:text-gray-400 mb-8 pt-2">
+
+                 <p className="text-gray-600 dark:text-gray-400 mb-8 mt-5 pt-2">
             When I’m not coding, you’ll likely find me exploring new hobbies or diving deeper into my current passions. 
             Whether it’s experimenting with different coffee brewing methods to perfect my morning ritual,
              hitting the trails for a scenic bike ride, capturing stunning landscapes with my camera, or getting lost in a good book,
@@ -195,7 +196,6 @@ const About = () => {
               </p>
             </div>
 
-            
 
             {/* Skills */}
             <div>
@@ -248,9 +248,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
- 
-     
 
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
