@@ -175,7 +175,7 @@ const Nav = ({ toggleMenu, isMenuOpen, closeMenu }) => {
               
               {/* CTA Button */}
               <a 
-                href="#contact" 
+                href="/contact" 
                 className="ml-2 group relative overflow-hidden px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-xl shadow-lg hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-0.5"
               >
                 <span className="relative z-10 flex items-center">

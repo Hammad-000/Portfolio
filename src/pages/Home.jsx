@@ -12,13 +12,13 @@ const Home = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
-  
+
   // Ref for scroll animations
   const homeRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
-  
+
   const homeInView = useInView(homeRef, { once: true, amount: 0.3 });
   const skillsInView = useInView(skillsRef, { once: true, amount: 0.3 });
   const projectsInView = useInView(projectsRef, { once: true, amount: 0.3 });
@@ -143,7 +143,7 @@ const Home = () => {
 
   const buttonVariants = {
     initial: { scale: 1 },
-    hover: { 
+    hover: {
       scale: 1.05,
       boxShadow: "0px 10px 30px rgba(59, 130, 246, 0.5)",
       transition: { duration: 0.2 }
@@ -166,7 +166,7 @@ const Home = () => {
   };
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -183,7 +183,7 @@ const Home = () => {
           className={`absolute ${icon.color} text-4xl `}
           style={{
             left: `${23 + index * 3}%`,
-            top: `${27 + index * 1}%`
+            top: `${34 + index * 1}%`
           }}
         >
           {icon.icon}
@@ -191,20 +191,20 @@ const Home = () => {
       ))}
 
       {/* Hero Section */}
-      <motion.section 
+      <motion.section
         ref={homeRef}
         initial="hidden"
         animate={homeInView ? "visible" : "hidden"}
         variants={containerVariants}
-        id="home" 
+        id="home"
         className="container mx-auto px-6 py-20 md:py-32 relative"
       >
         <div className="flex flex-col md:flex-row items-center justify-between">
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="md:w-1/2 mb-12 md:mb-0"
           >
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
@@ -212,28 +212,30 @@ const Home = () => {
             >
               Frontend Developer & UI Designer
             </motion.div>
-            
-            <motion.h1 
+
+            <motion.h1
               variants={itemVariants}
               className="text-5xl md:text-7xl font-bold mb-6"
             >
               Hello! <br />
               I'm <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Hammad</span>
             </motion.h1>
-            
-            <motion.p 
+
+            <motion.p
               variants={itemVariants}
               className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl"
             >
-              I create beautiful, functional web experiences. Passionate about clean code, 
+              I create beautiful, functional web experiences. Passionate about clean code,
               intuitive design, and cutting-edge technologies.
             </motion.p>
+
+            <motion.div
             
-            <motion.div 
               variants={containerVariants}
               className="flex flex-wrap gap-4 mb-8"
+
             >
-              <motion.button 
+              <motion.button
                 variants={buttonVariants}
                 initial="initial"
                 whileHover="hover"
@@ -242,7 +244,7 @@ const Home = () => {
               >
                 View Projects <FaArrowRight />
               </motion.button>
-              <motion.button 
+              <motion.button
                 variants={buttonVariants}
                 initial="initial"
                 whileHover="hover"
@@ -252,12 +254,12 @@ const Home = () => {
                 <FaDownload /> Download CV
               </motion.button>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               variants={containerVariants}
               className="flex space-x-6"
             >
-              {[FaGithub, FaLinkedin, FaTwitter,  ].map((Icon, index) => (
+              {[FaGithub, FaLinkedin, FaTwitter,].map((Icon, index) => (
                 <motion.a
                   key={index}
                   variants={itemVariants}
@@ -271,57 +273,37 @@ const Home = () => {
               ))}
             </motion.div>
           </motion.div>
-          
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.8, rotateY: 180 }}
-            animate={{ 
-              opacity: 1, 
-              scale: 1, 
-              rotateY: 0,
-              transition: { 
-                duration: 0.8,
-                ease: "easeOut"
-              }
-            }}
+          <div
             className="md:w-1/2 flex justify-center"
           >
             <div className="relative">
-              <motion.div 
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
+              <div
+
                 className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-white dark:border-gray-800 shadow-2xl"
-                style={{
-                  transform: `translateX(${mousePosition.x}px) translateY(${mousePosition.y}px)`
-                }}
               >
-                <motion.img 
-                  initial={{ scale: 1.2 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.8 }}
-                  src="/photo/dp.jpg" 
-                  alt="Hammad - Developer" 
+                <img
+                  src="/photo/dp.jpg"
+                  alt="Hammad - Developer"
                   className="w-full h-full object-cover"
                 />
-              </motion.div>
+              </div>
 
-          
-            
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Scroll indicator */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
         >
-          <motion.div 
-            animate={{ 
+          <motion.div
+            animate={{
               y: [0, 10, 0],
             }}
-            transition={{ 
+            transition={{
               duration: 2,
               repeat: Infinity,
               repeatType: "reverse"
@@ -337,20 +319,20 @@ const Home = () => {
       </motion.section>
 
       {/* Skills Section */}
-      <motion.section 
+      <motion.section
         ref={skillsRef}
         initial="hidden"
         animate={skillsInView ? "visible" : "hidden"}
         variants={containerVariants}
-        id="languages-tools" 
+        id="languages-tools"
         className="bg-white dark:bg-gray-900 py-20 overflow-hidden"
       >
         <div className="container mx-auto px-6">
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="text-center mb-12"
           >
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: -20 }}
               animate={skillsInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6 }}
@@ -362,7 +344,7 @@ const Home = () => {
               Technologies I use to bring ideas to life
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <motion.div
               variants={slideInVariants}
@@ -370,7 +352,7 @@ const Home = () => {
               <h3 className="text-2xl font-bold mb-8 text-center md:text-left">Programming Languages</h3>
               <div className="space-y-6">
                 {languages.map((language, index) => (
-                  <motion.div 
+                  <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -50 }}
                     animate={skillsInView ? { opacity: 1, x: 0 } : {}}
@@ -380,7 +362,7 @@ const Home = () => {
                   >
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-3">
-                        <motion.div 
+                        <motion.div
                           whileHover={{ rotate: 360 }}
                           transition={{ duration: 0.6 }}
                           className="text-2xl"
@@ -392,7 +374,7 @@ const Home = () => {
                       <span className="text-gray-500 dark:text-gray-400">{language.level}%</span>
                     </div>
                     <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
-                      <motion.div 
+                      <motion.div
                         custom={language.level}
                         initial="hidden"
                         animate={skillsInView ? "visible" : "hidden"}
@@ -411,7 +393,7 @@ const Home = () => {
               <h3 className="text-2xl font-bold mb-8 text-center md:text-left">Tools & Technologies</h3>
               <div className="space-y-6">
                 {tools.map((tool, index) => (
-                  <motion.div 
+                  <motion.div
                     key={index}
                     initial={{ opacity: 0, x: 50 }}
                     animate={skillsInView ? { opacity: 1, x: 0 } : {}}
@@ -421,7 +403,7 @@ const Home = () => {
                   >
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-3">
-                        <motion.div 
+                        <motion.div
                           whileHover={{ rotate: 360 }}
                           transition={{ duration: 0.6 }}
                           className="text-2xl"
@@ -433,7 +415,7 @@ const Home = () => {
                       <span className="text-gray-500 dark:text-gray-400">{tool.level}%</span>
                     </div>
                     <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
-                      <motion.div 
+                      <motion.div
                         custom={tool.level}
                         initial="hidden"
                         animate={skillsInView ? "visible" : "hidden"}
@@ -443,8 +425,8 @@ const Home = () => {
                     </div>
                   </motion.div>
                 ))}
-                
-                <motion.div 
+
+                <motion.div
                   initial={{ opacity: 0 }}
                   animate={skillsInView ? { opacity: 1 } : {}}
                   transition={{ delay: 0.8 }}
@@ -453,7 +435,7 @@ const Home = () => {
                   <h4 className="text-lg font-semibold mb-4">Tools I Use</h4>
                   <div className="flex flex-wrap gap-3">
                     {["VS Code", "Figma", "GitHub", "Npm", "Framer Motion", "Axios", "TanStack Query"].map((tool, index) => (
-                      <motion.span 
+                      <motion.span
                         key={index}
                         initial={{ opacity: 0, scale: 0 }}
                         animate={skillsInView ? { opacity: 1, scale: 1 } : {}}
@@ -473,13 +455,13 @@ const Home = () => {
       </motion.section>
 
       {/* Projects Section */}
-      <motion.section 
+      <motion.section
         ref={projectsRef}
-        id="projects" 
+        id="projects"
         className="py-20"
       >
         <div className="container mx-auto px-6">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={projectsInView ? { opacity: 1, y: 0 } : {}}
             className="text-center mb-12"
@@ -489,30 +471,30 @@ const Home = () => {
               A selection of my recent work showcasing my skills and approach
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 animate={projectsInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: index * 0.2 }}
-                whileHover={{ 
+                whileHover={{
                   y: -10,
                   transition: { duration: 0.3 }
                 }}
                 className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
                 <div className="h-48 overflow-hidden">
-                  <motion.img 
-                    src={project.image} 
+                  <motion.img
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover"
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.5 }}
                   />
                 </div>
-                <motion.div 
+                <motion.div
                   className="p-6"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -522,7 +504,7 @@ const Home = () => {
                   <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tech.map((tech, i) => (
-                      <motion.span 
+                      <motion.span
                         key={i}
                         whileHover={{ scale: 1.1 }}
                         className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm"
@@ -531,7 +513,7 @@ const Home = () => {
                       </motion.span>
                     ))}
                   </div>
-                  <motion.button 
+                  <motion.button
                     whileHover={{ x: 10 }}
                     className="text-blue-600 dark:text-blue-400 font-semibold flex items-center gap-2"
                   >
@@ -545,25 +527,25 @@ const Home = () => {
       </motion.section>
 
       {/* Contact Section */}
-      <motion.section 
+      <motion.section
         ref={contactRef}
-        id="contact" 
+        id="contact"
         className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 overflow-hidden"
       >
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={contactInView ? { opacity: 1, scale: 1 } : {}}
           className="container mx-auto px-6"
         >
           <div className="max-w-2xl mx-auto text-center">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={contactInView ? { opacity: 1, y: 0 } : {}}
               className="text-4xl font-bold mb-6"
             >
               Let's Work Together
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               animate={contactInView ? { opacity: 1 } : {}}
               transition={{ delay: 0.2 }}
@@ -572,7 +554,7 @@ const Home = () => {
               Have a project in mind? I'd love to hear about it. Let's create something amazing together.
             </motion.p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button 
+              <motion.button
                 variants={buttonVariants}
                 initial="initial"
                 whileHover="hover"
@@ -581,7 +563,7 @@ const Home = () => {
               >
                 Get In Touch
               </motion.button>
-              <motion.button 
+              <motion.button
                 variants={buttonVariants}
                 initial="initial"
                 whileHover="hover"
@@ -595,8 +577,8 @@ const Home = () => {
         </motion.div>
       </motion.section>
 
-  
-   
+
+
     </motion.div>
   );
 };
