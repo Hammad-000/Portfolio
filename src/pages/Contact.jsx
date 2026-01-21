@@ -233,33 +233,7 @@ const Contact = () => {
         </div>
 
 
-        <div className="mt-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2">
-              <h3 className="text-3xl font-bold mb-4">Based in San Francisco</h3>
-              <p className="text-blue-100 mb-6">
-                Serving clients globally with a focus on innovative web solutions and digital transformation.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <h4 className="font-bold mb-2">Quick Response</h4>
-                  <p className="text-blue-100 text-sm">Typically replies within 2 hours</p>
-                </div>
-                <div>
-                  <h4 className="font-bold mb-2">Remote Work</h4>
-                  <p className="text-blue-100 text-sm">Available for remote projects worldwide</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
-              <h4 className="font-bold mb-4">Office Hours</h4>
-              <p className="mb-2">Mon-Fri: 9AM-6PM PST</p>
-              <p className="text-sm text-blue-200">
-                For urgent matters outside office hours, please email directly.
-              </p>
-            </div>
-          </div>
-        </div>
+      
       </section>
 
 
