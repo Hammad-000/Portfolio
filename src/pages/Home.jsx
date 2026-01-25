@@ -45,7 +45,7 @@ const Home = () => {
       link: "./"
     },
     {
-      title: "Luc Travel Web",
+      title: "Lux Travel Web",
       description: "Mobile app for tracking health metrics and workouts",
       image: "./photo/travel.png",
       tech: ["React Native", "Firebase", "TailwindCSS"],
