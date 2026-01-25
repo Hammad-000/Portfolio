@@ -41,13 +41,14 @@ const Home = () => {
       title: "E-Commerce Platform",
       description: "Full-stack e-commerce solution with React & Node.js",
       tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&auto=format&fit=crop",
-      link: "#"
+      image: "",
+      link: "./"
     },
     {
       title: "Health Tracker App",
       description: "Mobile app for tracking health metrics and workouts",
       tech: ["React Native", "Firebase", "Redux"],
+      
       image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w-500&auto=format&fit=crop",
       link: "#"
     },
