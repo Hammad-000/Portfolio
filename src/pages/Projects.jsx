@@ -8,7 +8,7 @@ const Projects = () => {
       description: "A modern travel booking platform with interactive maps, hotel booking, and itinerary planning features.",
       image: "./photo/travel.png",
       tags: ["React", "Node.js", "MongoDB", "Mapbox"],
-      liveLink: "#",
+      liveLink: "https://lux-traveller.vercel.app/",
       githubLink: "#"
     },
     {
@@ -16,17 +16,17 @@ const Projects = () => {
       title: "Analytics Dashboard",
       description: "Real-time data visualization dashboard with customizable charts, metrics tracking, and reporting tools.",
       image: "./photo/dashboard.png",
-      tags: ["Next.js", "D3.js", "Express", "PostgreSQL"],
-      liveLink: "#",
+      tags: ["Chart.js", "D3.js", "TailwindCSS", "React"],
+      liveLink: "https://admin-dashboard-seven-gamma-65.vercel.app/dashboard",
       githubLink: "#"
     },
     {
       id: 3,
       title: "Food Delivery App",
-      description: "Full-stack food ordering application with restaurant discovery, cart management, and payment integration.",
+      description: "Food ordering application with restaurant discovery, cart management.",
       image: "./photo/foodmain.png",
       tags: ["React Native", "Firebase", "Stripe", "Redux"],
-      liveLink: "#",
+      liveLink: "https://inferno-grill.vercel.app/",
       githubLink: "#"
     }
   ];
@@ -40,7 +40,7 @@ const Projects = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-8">
         {project.map((project) => (
           <div 
             key={project.id}
