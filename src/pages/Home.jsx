@@ -38,25 +38,24 @@ const Home = () => {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with React & Node.js",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      image: "",
+      title: "Inferno Grill",
+      description: "FastFood orders website with React & Tailwind",
+      tech: ["React", "Firebase", "Motion", "TailwindCSS"],
+      image: "./photo/foodmain.png",
       link: "./"
     },
     {
-      title: "Health Tracker App",
+      title: "Luc Travel Web",
       description: "Mobile app for tracking health metrics and workouts",
-      tech: ["React Native", "Firebase", "Redux"],
-      
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w-500&auto=format&fit=crop",
+      image: "./photo/travel.png",
+      tech: ["React Native", "Firebase", "TailwindCSS"],
       link: "#"
     },
     {
-      title: "Portfolio Website",
-      description: "Modern portfolio with animations and dark mode",
-      tech: ["Next.js", "Tailwind", "Framer Motion"],
-      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=500&auto=format&fit=crop",
+      title: "Admin Dashboard",
+      description: "",
+      tech: ["Chart.js", "Tailwind", "Framer Motion"],
+      image: "./photo/dashboard.png",
       link: "#"
     }
   ];
