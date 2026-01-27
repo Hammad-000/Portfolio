@@ -8,26 +8,26 @@ const Projects = () => {
       description: "A modern travel booking platform with interactive maps, hotel booking, and itinerary planning features.",
       image: "./photo/travel.png",
       tags: ["React", "Node.js", "MongoDB", "Mapbox"],
-      liveLink: "#",
-      githubLink: "#"
+      liveLink: "https://lux-traveller.vercel.app/home",
+      githubLink: "https://github.com/Hammad-000/lux-traveller"
     },
     {
       id: 2,
       title: "Analytics Dashboard",
       description: "Real-time data visualization dashboard with customizable charts, metrics tracking, and reporting tools.",
       image: "./photo/dashboard.png",
-      tags: ["Next.js", "D3.js", "Express", "PostgreSQL"],
-      liveLink: "#",
-      githubLink: "#"
+      tags: ["Chart.js", "React", "TailwindCSS", "PostgreSQL"],
+      liveLink: "https://admin-dashboard-seven-gamma-65.vercel.app/dashboard",
+      githubLink: "https://github.com/Hammad-000/admin-dashboard"
     },
     {
       id: 3,
-      title: "Food Delivery App",
+      title: "Inferno Grill",
       description: "Full-stack food ordering application with restaurant discovery, cart management, and payment integration.",
       image: "./photo/foodmain.png",
       tags: ["React Native", "Firebase", "Stripe", "Redux"],
-      liveLink: "#",
-      githubLink: "#"
+      liveLink: "https://inferno-grill.vercel.app/login",
+      githubLink: "https://github.com/Hammad-000/inferno-grill"
     }
   ];
 
