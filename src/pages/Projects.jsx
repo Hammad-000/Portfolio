@@ -8,14 +8,20 @@ const Projects = () => {
       description: "A modern travel booking platform with interactive maps, hotel booking, and itinerary planning features.",
       image: "./photo/travel.png",
       tags: ["React", "Node.js", "MongoDB", "Mapbox"],
+<<<<<<< HEAD
       liveLink: "https://lux-traveller.vercel.app/home",
       githubLink: "https://github.com/Hammad-000/lux-traveller"
+=======
+      liveLink: "https://lux-traveller.vercel.app/",
+      githubLink: "#"
+>>>>>>> 36195fb6280d228078169ef60af5a801862503b4
     },
     {
       id: 2,
       title: "Analytics Dashboard",
       description: "Real-time data visualization dashboard with customizable charts, metrics tracking, and reporting tools.",
       image: "./photo/dashboard.png",
+<<<<<<< HEAD
       tags: ["Chart.js", "React", "TailwindCSS", "PostgreSQL"],
       liveLink: "https://admin-dashboard-seven-gamma-65.vercel.app/dashboard",
       githubLink: "https://github.com/Hammad-000/admin-dashboard"
@@ -28,6 +34,20 @@ const Projects = () => {
       tags: ["React Native", "Firebase", "Stripe", "Redux"],
       liveLink: "https://inferno-grill.vercel.app/login",
       githubLink: "https://github.com/Hammad-000/inferno-grill"
+=======
+      tags: ["Chart.js", "D3.js", "TailwindCSS", "React"],
+      liveLink: "https://admin-dashboard-seven-gamma-65.vercel.app/dashboard",
+      githubLink: "#"
+    },
+    {
+      id: 3,
+      title: "Food Delivery App",
+      description: "Food ordering application with restaurant discovery, cart management.",
+      image: "./photo/foodmain.png",
+      tags: ["React Native", "Firebase", "Stripe", "Redux"],
+      liveLink: "https://inferno-grill.vercel.app/",
+      githubLink: "#"
+>>>>>>> 36195fb6280d228078169ef60af5a801862503b4
     }
   ];
 
@@ -40,7 +60,7 @@ const Projects = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-8">
         {project.map((project) => (
           <div 
             key={project.id}
