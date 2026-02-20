@@ -13,7 +13,6 @@ const Home = () => {
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
 
-  // Ref for scroll animations
   const homeRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
@@ -42,21 +41,26 @@ const Home = () => {
       description: "FastFood orders website with React & Tailwind",
       tech: ["React", "Firebase", "Motion", "TailwindCSS"],
       image: "./photo/foodmain.png",
-      link: "./"
+         liveLink: "https://inferno-grill.vercel.app/",
+      githubLink: "https://github.com/Hammad-000/inferno-grill",
+
     },
     {
       title: "Lux Travel Web",
       description: "Mobile app for tracking health metrics and workouts",
       image: "./photo/travel.png",
       tech: ["React Native", "Firebase", "TailwindCSS"],
-      link: "#"
+       githubLink: "https://github.com/Hammad-000/lux-traveller",
+      liveLink: "https://lux-traveller.vercel.app/"
+ 
     },
     {
       title: "Admin Dashboard",
-      description: "",
+      description: "AdminDashboard Design",
       tech: ["Chart.js", "Tailwind", "Framer Motion"],
       image: "./photo/dashboard.png",
-      link: "#"
+      liveLink: "https://admin-dashboard-seven-gamma-65.vercel.app", 
+      githubLink: "https://github.com/Hammad-000/admin-dashboard"
     }
   ];
 
@@ -455,76 +459,94 @@ const Home = () => {
       </motion.section>
 
       {/* Projects Section */}
-      <motion.section
-        ref={projectsRef}
-        id="projects"
-        className="py-20"
-      >
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={projectsInView ? { opacity: 1, y: 0 } : {}}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              A selection of my recent work showcasing my skills and approach
-            </p>
-          </motion.div>
+    {/* Projects Section */}
+<motion.section
+  ref={projectsRef}
+  id="projects"
+  className="py-20"
+>
+  <div className="container mx-auto px-6">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={projectsInView ? { opacity: 1, y: 0 } : {}}
+      className="text-center mb-12"
+    >
+      <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
+      <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        A selection of my recent work showcasing my skills and approach
+      </p>
+    </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                animate={projectsInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: index * 0.2 }}
-                whileHover={{
-                  y: -10,
-                  transition: { duration: 0.3 }
-                }}
-                className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
-              >
-                <div className="h-48 overflow-hidden">
-                  <motion.img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.5 }}
-                  />
-                </div>
-                <motion.div
-                  className="p-6"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.2 }}
-                >
-                  <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tech.map((tech, i) => (
-                      <motion.span
-                        key={i}
-                        whileHover={{ scale: 1.1 }}
-                        className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm"
-                      >
-                        {tech}
-                      </motion.span>
-                    ))}
-                  </div>
-                  <motion.button
-                    whileHover={{ x: 10 }}
-                    className="text-blue-600 dark:text-blue-400 font-semibold flex items-center gap-2"
-                  >
-                    View Project <FaArrowRight />
-                  </motion.button>
-                </motion.div>
-              </motion.div>
-            ))}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {projects.map((project, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 50 }}
+          animate={projectsInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: index * 0.2 }}
+          whileHover={{
+            y: -10,
+            transition: { duration: 0.3 }
+          }}
+          className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
+        >
+          <div className="h-48 overflow-hidden">
+            <motion.img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-full object-cover"
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.5 }}
+            />
           </div>
-        </div>
-      </motion.section>
+          <motion.div
+            className="p-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+          >
+            <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
+            <div className="flex flex-wrap gap-2 mb-6">
+              {project.tech.map((tech, i) => (
+                <motion.span
+                  key={i}
+                  whileHover={{ scale: 1.1 }}
+                  className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm"
+                >
+                  {tech}
+                </motion.span>
+              ))}
+            </div>
+            <div className="flex gap-4">
+              {/* Link to Live Project */}
+              <motion.a
+                href={project.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 dark:text-blue-400 font-semibold flex items-center gap-2"
+              >
+                View Live
+                <FaArrowRight />
+              </motion.a>
+
+              {/* Link to GitHub */}
+              <motion.a
+                href={project.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 dark:text-gray-400 font-semibold flex items-center gap-2"
+              >
+                GitHub
+                <FaGithub />
+              </motion.a>
+            </div>
+          </motion.div>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</motion.section>
 
       {/* Contact Section */}
       <motion.section
