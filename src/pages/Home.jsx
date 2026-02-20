@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaCode, FaPalette, FaMobile, FaServer, FaArrowRight, FaDownload, FaBolt, FaDatabase, FaNetworkWired } from 'react-icons/fa';
-import { SiHtml5, SiCss3, SiJavascript, SiReact, SiGit, SiTailwindcss, SiSupabase, SiFramer, SiAxios, SiReactquery } from 'react-icons/si';
+import {
+  SiHtml5, SiCss3, SiJavascript, SiReact, SiGit, SiTailwindcss, SiSupabase, SiFramer, SiAxios, SiReactquery,
+  SiNodedotjs, SiMongodb, SiExpress   // <-- added new icons
+} from 'react-icons/si';
 import { motion, useAnimation, useInView, useScroll, useTransform } from 'framer-motion';
 import { IoLogoGithub } from "react-icons/io5";
 import { useRef } from 'react';
-
-
 
 const Home = () => {
   const controls = useAnimation();
@@ -41,25 +42,23 @@ const Home = () => {
       description: "FastFood orders website with React & Tailwind",
       tech: ["React", "Firebase", "Motion", "TailwindCSS"],
       image: "./photo/foodmain.png",
-         liveLink: "https://inferno-grill.vercel.app/",
+      liveLink: "https://inferno-grill.vercel.app/",
       githubLink: "https://github.com/Hammad-000/inferno-grill",
-
     },
     {
       title: "Lux Travel Web",
       description: "Mobile app for tracking health metrics and workouts",
       image: "./photo/travel.png",
       tech: ["React Native", "Firebase", "TailwindCSS"],
-       githubLink: "https://github.com/Hammad-000/lux-traveller",
+      githubLink: "https://github.com/Hammad-000/lux-traveller",
       liveLink: "https://lux-traveller.vercel.app/"
- 
     },
     {
       title: "Admin Dashboard",
       description: "AdminDashboard Design",
       tech: ["Chart.js", "Tailwind", "Framer Motion"],
       image: "./photo/dashboard.png",
-      liveLink: "https://admin-dashboard-seven-gamma-65.vercel.app", 
+      liveLink: "https://admin-dashboard-seven-gamma-65.vercel.app",
       githubLink: "https://github.com/Hammad-000/admin-dashboard"
     }
   ];
@@ -71,10 +70,14 @@ const Home = () => {
     { name: "React", icon: <SiReact className="text-cyan-400" />, level: 80 },
   ];
 
+  // Updated tools array with Node.js, MongoDB, Express
   const tools = [
     { name: "Git", icon: <SiGit className="text-red-500" />, level: 70 },
     { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400" />, level: 80 },
     { name: "Supabase", icon: <SiSupabase className="text-green-500" />, level: 75 },
+    { name: "Node.js", icon: <SiNodedotjs className="text-green-600" />, level: 75 },
+    { name: "Express", icon: <SiExpress className="text-gray-600 dark:text-gray-400" />, level: 70 },
+    { name: "MongoDB", icon: <SiMongodb className="text-green-600" />, level: 70 },
   ];
 
   const floatingIcons = [
@@ -83,7 +86,6 @@ const Home = () => {
     { icon: <SiJavascript />, color: "text-yellow-500", delay: 1 },
     { icon: <FaCode />, color: "text-blue-400", delay: 1.5 },
     { icon: <IoLogoGithub />, color: "text-blue-400", delay: 2 },
-
   ];
 
   const containerVariants = {
@@ -203,6 +205,7 @@ const Home = () => {
         id="home"
         className="container mx-auto px-6 py-20 md:py-32 relative"
       >
+        {/* ... (hero section remains unchanged) ... */}
         <div className="flex flex-col md:flex-row items-center justify-between">
           <motion.div
             variants={itemVariants}
@@ -234,10 +237,8 @@ const Home = () => {
             </motion.p>
 
             <motion.div
-            
               variants={containerVariants}
               className="flex flex-wrap gap-4 mb-8"
-
             >
               <motion.button
                 variants={buttonVariants}
@@ -263,7 +264,7 @@ const Home = () => {
               variants={containerVariants}
               className="flex space-x-6"
             >
-              {[FaGithub, FaLinkedin, FaTwitter,].map((Icon, index) => (
+              {[FaGithub, FaLinkedin, FaTwitter].map((Icon, index) => (
                 <motion.a
                   key={index}
                   variants={itemVariants}
@@ -277,21 +278,15 @@ const Home = () => {
               ))}
             </motion.div>
           </motion.div>
-          <div
-            className="md:w-1/2 flex justify-center"
-          >
+          <div className="md:w-1/2 flex justify-center">
             <div className="relative">
-              <div
-
-                className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-white dark:border-gray-800 shadow-2xl"
-              >
+              <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-white dark:border-gray-800 shadow-2xl">
                 <img
                   src="/photo/dp.jpg"
                   alt="Hammad - Developer"
                   className="w-full h-full object-cover"
                 />
               </div>
-
             </div>
           </div>
         </div>
@@ -459,94 +454,90 @@ const Home = () => {
       </motion.section>
 
       {/* Projects Section */}
-    {/* Projects Section */}
-<motion.section
-  ref={projectsRef}
-  id="projects"
-  className="py-20"
->
-  <div className="container mx-auto px-6">
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={projectsInView ? { opacity: 1, y: 0 } : {}}
-      className="text-center mb-12"
-    >
-      <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
-      <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-        A selection of my recent work showcasing my skills and approach
-      </p>
-    </motion.div>
-
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {projects.map((project, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 50 }}
-          animate={projectsInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: index * 0.2 }}
-          whileHover={{
-            y: -10,
-            transition: { duration: 0.3 }
-          }}
-          className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
-        >
-          <div className="h-48 overflow-hidden">
-            <motion.img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-full object-cover"
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.5 }}
-            />
-          </div>
+      <motion.section
+        ref={projectsRef}
+        id="projects"
+        className="py-20"
+      >
+        <div className="container mx-auto px-6">
           <motion.div
-            className="p-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={projectsInView ? { opacity: 1, y: 0 } : {}}
+            className="text-center mb-12"
           >
-            <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
-            <div className="flex flex-wrap gap-2 mb-6">
-              {project.tech.map((tech, i) => (
-                <motion.span
-                  key={i}
-                  whileHover={{ scale: 1.1 }}
-                  className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm"
-                >
-                  {tech}
-                </motion.span>
-              ))}
-            </div>
-            <div className="flex gap-4">
-              {/* Link to Live Project */}
-              <motion.a
-                href={project.liveLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 dark:text-blue-400 font-semibold flex items-center gap-2"
-              >
-                View Live
-                <FaArrowRight />
-              </motion.a>
-
-              {/* Link to GitHub */}
-              <motion.a
-                href={project.githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-400 font-semibold flex items-center gap-2"
-              >
-                GitHub
-                <FaGithub />
-              </motion.a>
-            </div>
+            <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              A selection of my recent work showcasing my skills and approach
+            </p>
           </motion.div>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</motion.section>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                animate={projectsInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: index * 0.2 }}
+                whileHover={{
+                  y: -10,
+                  transition: { duration: 0.3 }
+                }}
+                className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
+              >
+                <div className="h-48 overflow-hidden">
+                  <motion.img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.5 }}
+                  />
+                </div>
+                <motion.div
+                  className="p-6"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                >
+                  <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.tech.map((tech, i) => (
+                      <motion.span
+                        key={i}
+                        whileHover={{ scale: 1.1 }}
+                        className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm"
+                      >
+                        {tech}
+                      </motion.span>
+                    ))}
+                  </div>
+                  <div className="flex gap-4">
+                    <motion.a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 dark:text-blue-400 font-semibold flex items-center gap-2"
+                    >
+                      View Live
+                      <FaArrowRight />
+                    </motion.a>
+                    <motion.a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-600 dark:text-gray-400 font-semibold flex items-center gap-2"
+                    >
+                      GitHub
+                      <FaGithub />
+                    </motion.a>
+                  </div>
+                </motion.div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
 
       {/* Contact Section */}
       <motion.section
@@ -598,9 +589,6 @@ const Home = () => {
           </div>
         </motion.div>
       </motion.section>
-
-
-
     </motion.div>
   );
 };
