@@ -2,6 +2,7 @@ import React from 'react';
 import { FaGraduationCap, FaBriefcase, FaAward, FaHeart, FaCode, FaPalette, FaRocket, FaUsers, FaLightbulb, FaChartLine, FaGlobeAmericas, FaTools, FaBookOpen, FaGamepad, FaMusic, FaCamera,  FaCoffee } from 'react-icons/fa';
 import { RiMotorbikeFill } from "react-icons/ri";
 import { LiaDumbbellSolid } from "react-icons/lia";
+import { GrServerCluster } from "react-icons/gr";
 
 
 
@@ -55,7 +56,12 @@ const About = () => {
       items: ["Git", "VS Code", "Npm", "Pmpn", "Githurb", "Supabase"],
       icon: <FaTools className="text-green-500" />,
       color: "from-green-500 to-emerald-500"
-    }
+    },    {
+      category: " Backend",
+      items: ["Node.js", "Express", "MongoDb" ],
+      icon: <  GrServerCluster className="text-blue-500" />,
+      color: "from-blue-500 to-cyan-500"
+    },
   ];
 
   const values = [
