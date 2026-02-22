@@ -182,9 +182,9 @@ const About = () => {
               
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                 {hobbies.map((hobby, index) => (
-                  <div key={index} className="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-50 dark:bg-gray-800 hover:shadow-lg transition-shadow">
+                  <div key={index} className="flex cursor-pointer flex-col items-center justify-center p-4 rounded-xl bg-gray-50 dark:bg-gray-800 hover:shadow-lg transition-shadow">
                     <div className={`p-3 rounded-full ${hobby.color} mb-3`}>
-                      <span className="text-xl">{hobby.icon}</span>
+                      <span className="text-xl ">{hobby.icon}</span>
                     </div>
                     <span className="font-medium">{hobby.name}</span>
                   </div>
@@ -208,14 +208,14 @@ const About = () => {
               <h2 className="text-3xl font-bold mb-8">Skills & Expertise</h2>
               <div className="space-y-6">
                 {skills.map((skill, index) => (
-                  <div key={index} className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                  <div key={index} className="bg-gray-50 dark:bg-gray-800 rounded-xl  p-6 hover:shadow-lg transition-shadow">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="text-xl">
                         {skill.icon}
                       </div>
                       <h3 className="text-xl font-bold">{skill.category}</h3>
                     </div>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 cursor-pointer">
                       {skill.items.map((item, i) => (
                         <span 
                           key={i}

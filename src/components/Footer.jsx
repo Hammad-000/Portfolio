@@ -190,7 +190,7 @@ function Footer() {
         <div className="text-center mt-8">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white rounded-full transition-all duration-300 hover:shadow-lg"
+            className="inline-flex cursor-pointer items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white rounded-full transition-all duration-300 hover:shadow-lg"
           >
             <FaChevronUp size={12} />
             Back to Top
